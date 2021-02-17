@@ -56,3 +56,42 @@ form button {
 form button:hover {
     border-color: yellow;
 }
+
+#orderList {
+    list-style-type: none;
+}
+
+#orderList li.order {
+    margin: 0.5em auto;
+    font-size: 1.2em;
+    background-color: rgb(102, 124, 143);
+    width: 50ch;
+    border-left: rgb(224, 214, 62);
+    border-left-width: 20px;
+    border-left-style: solid;
+    padding-left: 5%;
+    padding: 0.5em 5% 0.5em 5%;
+}
+
+.movieTitle {
+    color: rgb(241, 237, 175);
+    font-weight: bold;
+    font-size: 1.4em;
+}
+
+.customer {
+    font-style: italic;
+}
+
+.customer,
+.ticketNumber{
+    color: rgb(245, 243, 240);
+}
+
+.movieTitle,
+.customer, 
+.ticketNumber {
+    display: block;
+    width: 25ch;
+    margin-top: 0 auto;
+}
