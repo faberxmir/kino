@@ -1,0 +1,34 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Billettkiosk!</title>
+</head>
+<body>
+    <form onsubmit="buy(); return false">
+        <label for="filmmeny">Velg en film:</label>
+        <select name="filmmeny" id="filmmeny" required>
+            <option value="Dances with wolves">Danser med ulver</option>
+            <option value="Waterworld">Waterworld!</option>
+            <option value="The Postman">Postmannen</option>
+            <option value="Prince of Thieves">Tyvenes Prins</option>
+        </select>
+        <br>
+        <label for="antall">Antall: </label>
+        <input type="number" id="antall" required>
+        <br>
+        <label for="navn">Navn:</label>
+        <input type="text" id="navn" placeholder="navn" required>
+        <br>
+        <label for="telefonnummer">Telefonnummer:</label>
+        <input type="number" id="telefonnummer" required>
+        <br>
+        <label for="epost">E-postaddresse:</label>
+        <input type="email" required>
+        <br>
+        <button type="submit" >Kjøp billett</button>
+    </form>
+    <script src="script/kinobillett.js"></script>
+</body>
+</html>
