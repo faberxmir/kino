@@ -3,7 +3,7 @@ let orders;
 //localStorage.clear();
 
 initPage();
-
+buy2();
 //------------------------------------------------------------------------------------------------------------\\
 function initPage(){
     orders = localStorage.getItem(lsOrdersName);
@@ -26,6 +26,7 @@ function buy(){
         telefonnummer: document.getElementById("telefonnummer").value,
         epost: document.getElementById("email").value
     }
+
     let jsonString = JSON.stringify(order);
 
     //returns false if no orders are equal
@@ -37,7 +38,15 @@ function buy(){
     } else {
         alert("Duplicate order!");
     }
+}
 
+function buy2(){
+    const nodelist = document.querySelectorAll("form input");
+
+    const order = {};
+    nodelist.forEach(node => {
+       order[node.id] = node.value;
+    });
 }
 
 function getOrdersToHTML(){
@@ -69,8 +78,6 @@ function checkForEqualOrder(jsonString){
     let isEqual = false;
     if(orders.length > 0){
         orders.forEach(order => {
-            console.log(jsonString);
-            console.log(JSON.stringify(order));
             if(JSON.stringify(order) == jsonString){
                 isEqual = true;
             }
